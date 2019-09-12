@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REST API - Articles</title>
+    <style>
+        h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        div {
+            width: 50%;
+            padding: 10px;
+            background-color: #ddd;
+            border: 1px solid #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>REST API</h1>
+    <p><a href="/logout">Logout</a></p>
+    <div>
+        <h3>Find specific article by ID</h3>
+        <a href="/articles/5W8N-MNB1-F04Y-T38C-00000-00">/articles/5W8N-MNB1-F04Y-T38C-00000-00</a>
+    </div>
+    <div>
+        <h3>Find all articles containing the given word (case insensitive):</h3>
+        <ul>
+            <li><a href="/articles?keyword=foo">/articles?keyword=foo</a></li>
+            <li><a href="/articles?keyword=xxx">/articles?keyword=xxx</a></li>
+            <li><a href="/articles?keyword=hawaii">/articles?keyword=hawaii</a></li>
+            <li><a href="/articles?keyword=asdf">/articles?keyword=asdf</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Get next unread article for the current user:</h3>
+        <a href="/next-article">/next-article</a>
+    </div>
+</body>
+</html>
